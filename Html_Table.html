@@ -8,11 +8,17 @@
 <body>
     <table border="1">
         <caption>Student's Data</caption>
-        <tr>
+            <tr>
+                <th rowspan="3">CSE</th>
+                <th colspan="2">Details</th>
+            </tr>
+        <thead>
+            <tr>
             <th> Name </th>
             <th> Age </th>
             <th> City</th>
         </tr>
+        </thead>
         <tr>
             <td>Alice</td>
             <td>23</td>
@@ -28,6 +34,11 @@
             <td>35</td>
             <td>India</td>
         </tr>
+        <tfoot>
+            <tr>
+                <td colspan="3">End of data</td>
+            </tr>
+        </tfoot>
         </table>
     </table>
     
