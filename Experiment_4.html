@@ -6,6 +6,8 @@
     <title>Hotel Room Booking Form</title>
 </head>
 <body>
+ <center>
+    <fieldset> 
     <form>
         <h1>Hotel Room Booking Form</h1>
         <label for="full name">Full Name:</label>
@@ -26,8 +28,17 @@
         <input type="date" id="out-date" name="out-date"
         placeholder="dd-mm-yyyy" required>
         <br><br>
+        <label for="pickup" name="pickup">Free Pickup:</label>
+        <br><br>
+        <input type="radio" id="pickup" name="pickup">
+        <label for="pickup" name="pickup">Yes Please! - Pick me up on arrival</label>
+        <br>
+        <input type="radio" id="pickup" name="pickup">
+        <label for="pickup" name="pickup">No Thanks - I'll make my own way there</label>
+        <br><br>
         <label for="room">Room Type:</label>
         <select>
+            <option>--None--</option>
             <option>Single Room</option>
             <option>Double Room</option>
             <option>Deluxe room</option>
@@ -43,12 +54,14 @@
         <br>
         <label for="reuests">Special Requests:</label>
         <br>
-        <textarea id="reuests" name="requests"></textarea>
+        <textarea rows="10" cols="80"  id="reuests" name="requests"></textarea>
         <br>
         <br>
         <button>Book Now</button>
         <button>Reset Form</Form></button>
     </form>
+    </fieldset> 
+ </center>
     
 </body>
 </html>
