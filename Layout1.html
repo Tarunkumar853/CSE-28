@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Practice</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        
+    }
+    html,*{
+        margin: 0;
+        padding: 0;
+    }
+    #main{
+        width: 900px;
+        height: 1000px;
+        background-color: aquamarine;
+        flex-direction: row;
+        display: flex;
+        gap: 10px;
+        margin: 0 auto;
+    }
+    #right{
+        flex-grow: 1;
+        height: 100px;
+        background-color: blue;
+        display: flex;
+        
+       
+    }
+    #left{
+        flex-grow: 2;
+        background-color: brown;
+        height: 100px;
+    }
+</style>
+<body>
+    <div id="main">
+        <div id="left">
+            <header><h2>Header</h2>
+            <main><h2>Main Content</h2>
+            <footer><h2>footer</h2>   
+        </div>
+        <div id="right">
+            <h2>Right Box</h2>
+        </div>
+    </div>
+    
+</body>
+</html>
