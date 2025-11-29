@@ -1,0 +1,16 @@
+button {
+    background-color: green;
+} 
+*{
+    font-family: 'Times New Roman';
+ }
+ h1{
+    text-transform: uppercase;
+    text-align: center;
+ }
+ #outer{
+    font-size: 25px;
+ }
+ #inner{
+    font-size: 10px;
+ }
