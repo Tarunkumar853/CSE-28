@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Grid</title>
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    }
+
+    .title {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    }
+
+    .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    }
+
+    .product-card {
+    width: 260px;
+    background: lightblue;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    }
+
+    .product-name {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    }
+
+    .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    }
+
+    .btn {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+
+    .btn:hover {
+    background: #0056b3;
+    }
+
+    @media (max-width: 900px) {
+    .product-card {
+        width: 45%;
+    }
+    }
+
+    @media (max-width: 600px) {
+    .product-card {
+        width: 90%;
+    }
+    }
+</style>
+</head>
+<body>
+
+  <h1 class="title">Electronics Product Grid</h1>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71tCOhEigtL._SL1500_.jpg" class="product-img" alt="Smartphone">
+      <h2 class="product-name">Samsung Galaxy M34 5G</h2>
+      <p class="price">₹14,999</p>
+      <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/71geVdy6-OS._SL1500_.jpg" class="product-img" alt="Laptop">
+      <h2 class="product-name">ASUS VivoBook 15</h2>
+      <p class="price">₹38,990</p>
+      <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/51CfKYzmFsL._SX679_.jpg" class="product-img" alt="Earbuds">
+      <h2 class="product-name">OnePlus Nord Buds 3</h2>
+      <p class="price">₹2,499</p>
+      <button class="btn">Buy Now</button>
+    </div>
+
+    <div class="product-card">
+      <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._SL1500_.jpg" class="product-img" alt="Smartwatch">
+      <h2 class="product-name">Fire-Boltt Phoenix Smartwatch</h2>
+      <p class="price">₹1,199</p>
+      <button class="btn">Buy Now</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
