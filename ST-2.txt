@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Product Page</title>
+    <style>
+body {
+font-family: 'Times New Roman', Times, serif;
+background-color: orange;
+margin: 0;
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+.model-card {
+background-color: black;
+width: 700px;
+border: 2px solid black;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+display: flex;
+gap: 30px;
+}
+.model-image img {
+width: 300px;
+height: 350px;
+object-fit: cover;
+border-radius: 5px;
+border: 1px solid #eee;
+}
+.model-info {
+padding-top: 10px;
+}
+h1 {
+color: orange;
+font-size: 28px;
+margin-top: 0;
+margin-bottom: 10px;
+}
+.model {
+color: orange;
+text-transform: uppercase;
+font-size: 12px;
+letter-spacing: 1px;
+margin-bottom: 15px;
+display: block;
+}
+.price {
+color: #e63946;
+font-size: 24px;
+font-weight: bold;
+margin: 15px 0;
+display: block;
+}
+.description {
+color: orange;
+line-height: 1.6;
+font-size: 15px;
+margin-bottom: 25px;
+}
+.btn-buy {
+background-color: #1d3557;
+color: white;
+padding: 12px 30px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+text-transform: uppercase;
+transition: background-color 0.3s;
+}
+.btn-buy:hover {
+background-color: red;
+}
+</style>
+</head>
+<body>
+<div class="model-card">
+    <div class="model-image">
+     <img src="https://vsprod.vijaysales.com/media/catalog/product/i/p/iphone_17_pro_cosmic_orange_pdp_image_position_1__en-in_1.jpg?optimize=medium&fit=bounds&height=500&width=500" alt="Iphone 17 Pro">
+    </div>
+ <div class="model-info">
+  <span class="Model">All-New Advanced Iphone</span>
+  <h1>Apple iphone 17 Pro</h1>
+  <p class="description">
+    The iPhone 17 Pro is an advanced smartphone featuring the A19 Pro chip for high performance, a 6.3-inch Super Retina XDR display with ProMotion, and a triple-camera system. It has a durable aluminum unibody design with an Action button for quick access to features, and it supports advanced connectivity like Wi-Fi 7 and 5G. Other features include advanced cooling technology, an Action button, and Apple Intelligence tools. 
+  </p>
+  <span class="price">$670.00</span>
+  <button class="btn-buy">Add to Cart</button>
+ </div>
+</div>
+</body>
+</html>
