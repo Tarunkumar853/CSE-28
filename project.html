@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple(India)</title>
+    <style>
+        .home{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: sans system-ui,'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .menus{
+            display: flex;
+            flex-direction: row;
+            margin: 15px;
+            gap: 40px;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            list-style: none;
+            color: rgb(36, 36, 36); 
+            text-decoration: none; 
+            font-weight: 300; 
+            font-size:small; 
+        }
+        .store_menu1 , .store_menu2{
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        background: white;
+        cursor: pointer;
+        }
+
+        .shop , .macs{
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style: none;
+            padding: 0;
+            margin: 70;
+            background: white;
+            border: none;
+        }
+
+        ul .shop , ul .macs{
+            color: black;
+            text-decoration: none;
+            list-style: none;
+            text-align: left;
+        }
+
+        ul .shop a , ul .macs a{
+            color: black;
+            text-decoration: none;
+            list-style: none;
+            font-family: sans-serif;
+            font-weight:500;
+            font-size: 20px;
+        }
+
+        .store_menu1:hover .shop , .store_menu2:hover .macs{
+            display: block;
+        }
+
+        .shop li , .macs li{
+            padding: 8px 12px;
+        }
+        .shop li a , .macs li a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <nav class="nav">
+            <ul class="menus">
+                <li class="store_menu1">Store
+                    <ul class="shop">
+                        <li style="margin-top: 40px;">Shop</li>
+                        <li><a href="#">Shop Gifts</a></li>
+                        <li><a href="#"> Mac</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">Apple Watch</a></li>
+                        <li><a href="#">AirPods</a></li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+                <li class="store_menu2">Mac
+                    <ul class="macs">
+                        <li><a href="1">Explore All mac</a></li>
+                        <li><a href="1">MacBook Air</a></li>
+                        <li><a href="1">MacBook Pro</a></li>
+                        <li><a href="1">iMac</a></li>
+                        <li><a href="1">Mac Mini</a></li>
+                        <li><a href="1">Mac Studio</a></li>
+                        <li><a href="1">Mac Pro</a></li>
+                        <li><a href="1">Displays</a></li>
+                    </ul>
+                </li>
+                <li>iPad</li>
+                <li>iPhone</li>
+                <li>Watch</li>
+                <li>AirPods</li>
+                <li>TV & Home</li>
+                <li>Entertainment</li>
+                <li>Accessories</li>
+                <li>Support</li>
+            </ul>
+
+        </nav>
+
+    </div>
+    
+</body>
+</html>
