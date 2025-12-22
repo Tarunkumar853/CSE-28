@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apple India Clone</title>
-
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Clone</title>
+    <style>
 * {
   margin: 0;
   padding: 0;
@@ -14,74 +13,124 @@
 }
 
 body {
-  background: #fff;
+  background: #141313;
   color: #1d1d1f;
 }
 
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(0,0,0,0.85);
-  backdrop-filter: blur(14px);
-}
-
-.nav ul {
-  max-width: 1150px;
-  margin: auto;
-  padding: 14px 20px;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav li {
-  color: #f5f5f7;
-  font-size: 13px;
-  cursor: pointer;
-  position: relative;
-}
-
-.nav li:hover {
-  opacity: 0.9;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
-  font-size: 20px;
+    color: #fff;
+    height: 44px;
 }
 
-.dropdown {
-  position: absolute;
-  top: 44px;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px);
-  background: #fff;
-  padding: 22px 26px;
-  border-radius: 14px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.35s ease;
-  min-width: 240px;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.dropdown a {
-  display: block;
-  color: #1d1d1f;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 6px 0;
+nav li {
+    margin: 0 10px;
+    position: relative;
 }
 
-.dropdown a:hover {
-  color: #0071e3;
+nav a {
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    display: block;
 }
 
-.nav li:hover .dropdown {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+nav li:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 200px;
+    z-index: 200;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    font-size: 12px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    cursor: pointer;
+    color: #f5f5f7;
+    font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: left 0.3s ease;
+        z-index: 99;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .submenu li {
+        margin: 5px 0;
+    }
+
+    .submenu a {
+        font-size: 16px;
+        padding-left: 30px;
+    }
+
+    .menu-toggle:checked + nav ul {
+        left: 0;
+    }
+
+    .menu-toggle-label {
+        display: block;
+    }
+
+    .logo {
+        order: -1;
+    }
 }
 
 .hero {
@@ -248,55 +297,57 @@ footer {
 }
 </style>
 </head>
-
 <body>
+    <header>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+            <ul>
+                <li><a href="store.html">Store</a>
+                    <ul class="submenu">
+                        <li><a href="#">Online Store</a></li>
+                        <li><a href="#">Retail Store</a></li>
+                        <li><a href="#">Refurbished</a></li>
+                    </ul>
+                </li>
+                <li><a href="mac.html">Mac</a>
+                    <ul class="submenu">
+                        <li><a href="#">MacBook Air</a></li>
+                        <li><a href="#">MacBook Pro</a></li>
+                        <li><a href="#">iMac</a></li>
+                    </ul>
+                </li>
+                <li><a href="ipad.html">iPad</a>
+                    <ul class="submenu">
+                        <li><a href="#">iPad Pro</a></li>
+                        <li><a href="#">iPad Air</a></li>
+                        <li><a href="#">iPad</a></li>
+                    </ul>
+                </li>
+                <li><a href="iphone.html">iPhone</a>
+                    <ul class="submenu">
+                        <li><a href="#">iPhone 15 Pro</a></li>
+                        <li><a href="#">iPhone 15</a></li>
+                        <li><a href="#">iPhone SE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Vision</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">TV & Home</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            <a href="project.html"></a><div class="logo">
+            <img src="https://substackcdn.com/image/fetch/$s_!G1lk!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg"
+            ><alt="Apple Logo></a>
+            </div>
+        </nav>
+    </header>
 
-<nav class="nav">
-<ul>
-  <li class="logo"></li>
-
-  <li>Store
-    <div class="dropdown">
-      <a href="#">Shop the Latest</a>
-      <a href="#">Mac</a>
-      <a href="#">iPad</a>
-      <a href="#">iPhone</a>
-      <a href="#">Accessories</a>
-    </div>
-  </li>
-
-  <li>Mac
-    <div class="dropdown">
-      <a href="#">MacBook Air</a>
-      <a href="#">MacBook Pro</a>
-      <a href="#">iMac</a>
-      <a href="#">Mac mini</a>
-    </div>
-  </li>
-
-  <li>iPad
-    <div class="dropdown">
-      <a href="#">iPad Pro</a>
-      <a href="#">iPad Air</a>
-      <a href="#">iPad</a>
-      <a href="#">iPad mini</a>
-    </div>
-  </li>
-
-  <li>iPhone
-    <div class="dropdown">
-      <a href="#">iPhone 15 Pro</a>
-      <a href="#">iPhone 15</a>
-      <a href="#">Compare</a>
-    </div>
-  </li>
-
-  <li>Watch</li>
-  <li>Support</li>
-</ul>
-</nav>
-
-<section class="hero">
+    <main>
+       <section class="hero">
 <img src="https://www.apple.com/in/iphone-17-pro/images/overview/highlights/highlights_design_endframe__flnga0hibmeu_large.jpg">
 <div class="hero-content">
   <h1>iPhone 17 Pro</h1>
@@ -402,9 +453,8 @@ footer {
   </div>
 </div>
 </section>
-
-<footer>
-  <p class="context">
+    <footer>
+    <p class="context">
     ◊Instant cashback is available with the purchase of an eligible product with qualifying American Express, Axis Bank and ICICI Bank cards only. Minimum transaction value of ₹10001 applies. Click here to see instant cashback amounts and eligible devices. Instant cashback is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card issuer. Total transaction value is calculated after any trade-in credit or eligible discount is applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant cashback being recalculated, and any refund may be adjusted to account for instant cashback clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice. Additional terms apply. Instant cashback is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant cashback.
   </p>
   <p class="context">
@@ -426,7 +476,8 @@ footer {
   </p>
   <p> Copyright © 2025 Apple Clone Project. All rights reserved.</p>
   <p>Created by Tarun Kumar</p>
-</footer>
-
+    </footer>
+</main>
 </body>
 </html>
+
