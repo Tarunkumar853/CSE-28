@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property </title>
+    <style>
+        .container
+        {
+            position: relative;
+            border: 1px solid black; 
+            background-color: bisque;
+            height: 8000px;
+        }
+        img{
+            margin: 10px;
+        }
+        .img2{
+            /* position: relative;
+            top: 100px;
+            left: 100px; */
+            position: absolute;
+            top: 200px;
+        }
+        .img4{
+            position: fixed;
+        }
+        .img3{
+            position: sticky;
+            top: 100px;
+        }
+        .box{
+            background-color: blanchedalmond;
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="photo.jpeg" alt="tarun" width="300px" height="300px" 
+        class="img1">
+
+        <img src="IMG_1919.jpeg" alt="tarun" width="300px" height="300px"
+        class="img2">
+
+        <img src="google logo.webp" alt="tarun" width="300px" height="300px"
+        class="img3">
+
+        <img src="worldnews.jpg" alt="tarun" width="300px" height="300px"
+        class="img4">
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>

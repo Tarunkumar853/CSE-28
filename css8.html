@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            background-color: aquamarine;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: row;
+            width: 400px;
+        }
+        #box1{
+            background-color: yellow;
+            border: 1px solid brown;
+            margin: 3px;
+            padding: 2px;
+            width: 47%;
+        }
+
+        #box2{
+            background-color: red;
+            border: 1px solid black;
+            width: 47%;
+            margin: 3px;
+            padding: 2px;
+        }
+
+        p{
+            border: 1px solid black;
+            margin: 5px;
+        }
+        img{
+             height: 170px;
+             width: 188px;
+        }
+        @media (max-width:640px){
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box">
+        Hello Jee
+    </div> -->
+
+    <div class="container">
+        <div id="box1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur</p>
+        </div>
+
+        <div id="box2">
+            <img src="worldnews.jpg">
+        </div>
+        
+    </div>
+</body>
+</html>
